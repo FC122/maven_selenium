@@ -4,7 +4,9 @@ This Selenium Java is project for Testing collage course. The project is offerin
 
 ## Features
 POM: The project implements Page-Object Model for structured, reliable and expandble test automation.
+
 Configuration.properties: It contains all environment variables in one place
+
 ConfiFileReader: Implements a file reader for environment variable ease of use
 
 ## Technologies
