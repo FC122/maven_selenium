@@ -1,6 +1,6 @@
 # Selenium Maven
 ## Overview
-This Selenium Java is project for Testing collage course. The project is offering a structured framework for creating and executing automated test cases. By leveraging Selenium WebDriver with Java, this project facilitates the automation of web application testing.
+This Selenium Java repo contains a project for collage testing course. The project is offering a structured framework for creating and executing automated test cases. By leveraging Selenium WebDriver with Java, this project facilitates the automation of web application testing.
 
 ## Features
 POM: The project implements Page-Object Model for structured, reliable and expandble test automation.
