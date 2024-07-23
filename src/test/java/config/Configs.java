@@ -6,7 +6,7 @@ import java.util.Properties;
 public class Configs {
   private static Configs instance;
   private Properties properties = new Properties();
-  private final String propertyFilePath = System.getProperty("user.dir") + "/src/test/java/CONFIG/Configuration.properties";
+  private final String propertyFilePath = System.getProperty("user.dir") + "/src/test/java/config/Configuration.properties";
 
   private Configs() {
     BufferedReader reader;
