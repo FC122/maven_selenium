@@ -5,13 +5,15 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+      - name:  Install Chrome
+        uses: browser-actions/setup-chrome@v1
       - name: Set up JDK
         uses: actions/setup-java@v1
+        with:
+          java-version: 21.0.2
       - name: Setup Maven Action
         uses: s4u/setup-maven-action@v1.14.0
       - run: mvn -v
-      - name:  Install Chrome
-        uses: browser-actions/setup-chrome@v1
       - name: Compile
         run: mvn compile
       - name: Test
