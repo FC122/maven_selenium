@@ -9,10 +9,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@3.9.8
+      - run: mvn -v
       - name:  Install Chrome
         uses: browser-actions/setup-chrome@v1
-      - name: Build
-        run: mvn build
       - name: Test
         run: mvn test
       - name: Deploy
