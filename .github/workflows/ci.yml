@@ -17,9 +17,6 @@ jobs:
       - name: Test
         run: mvn test
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: pavi2410/html-preview-action@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: target/surefire-reports/index.html
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+            html_file: target/surefire-reports/index.html'
