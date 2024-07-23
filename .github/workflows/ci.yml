@@ -8,14 +8,16 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 19
+          java-version: 21.0.2
       - name: Setup Maven Action
         uses: s4u/setup-maven-action@v1.14.0
       - run: mvn -v
       - name:  Install Chrome
         uses: browser-actions/setup-chrome@v1
+      - name: Compile
+        run: mvn -X compile
       - name: Test
-        run: mvn test
+        run: mvn -X test
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
