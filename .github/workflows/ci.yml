@@ -17,6 +17,6 @@ jobs:
       - name: Test
         run: mvn test
       - name: Deploy
-      - uses: pavi2410/html-preview-action@v2
+        uses: pavi2410/html-preview-action@v2
         with:
             html_file: target/surefire-reports/index.html'
