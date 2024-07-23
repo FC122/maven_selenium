@@ -4,9 +4,9 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
+      - uses: browser-actions/setup-chrome@v1
       - uses: actions/checkout@v2
-      - name:  Install Chrome
-        uses: browser-actions/setup-chrome@v1
+      - run: dir
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
