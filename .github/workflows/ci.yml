@@ -1,16 +1,23 @@
-name: test
+name: CI_test
 on: workflow_dispatch
-
 jobs:
-  test:
-    name: Test
+  build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: s4u/setup-maven-action@3.9.8
-      - run: mvn install
-      - name: generate report
-        run: mvn test
-      - uses: pavi2410/html-preview-action@v2
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
         with:
-            html_file: 'maven_selenium\target\surefire-reports\index.html'
+          java-version: 19
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@v1.14.0
+      - run: mvn -v
+      - name:  Install Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Test
+        run: mvn test
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/surefire-reports/index.html
