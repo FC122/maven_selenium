@@ -18,7 +18,7 @@ public class LoginPageTest extends BaseTest {
   }
 
   @Test(description = "Check that user can log in")
-  public void SuccessfulLoginTest(){ //1.3
+  public void SuccessfulLoginTest(){
     InventoryPage inventoryPage = PageFactory.initElements(getWebDriver(),InventoryPage.class);
     loginPage.logIn(configs.getProperty("username"), configs.getProperty("password"));
     Assert.assertEquals(getWebDriver().getCurrentUrl(),configs.getProperty("baseUrl")+(String)inventoryPage.getContent().byKey("url"));
