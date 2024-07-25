@@ -27,14 +27,14 @@ public class InventoryPageTest extends BaseTest {
   }
 
   @Test(description = "Second Task")
-  public void PrintItemData(){//2.1 zad
+  public void PrintItemData(){
     for(Item item:inventoryPage.getItems()){
       System.out.println(item.toString());
     }
   }
 
   @Test(description = "Check lowest to highest sorting")
-  public void HighToLowSortingTest(){//3. zad
+  public void HighToLowSortingTest(){
     inventoryPage.productSortSelect.click();
     inventoryPage.highToLowOption.click();
     inventoryPage.refreshItemsData();
@@ -45,7 +45,7 @@ public class InventoryPageTest extends BaseTest {
   }
 
   @Test(description = "Check that user can add the item with the lowest price to cart")
-  public void AddToCart() {// 4. zad
+  public void AddToCart() {
     List<Item> items = inventoryPage.getFreshItems();
     int minPriceIndex =0;
     double minPrice=items.get(minPriceIndex).getPrice();
@@ -65,7 +65,7 @@ public class InventoryPageTest extends BaseTest {
   }
 
   @Test(description = "Check that user can open item page and add 4th the item to cart")
-  public void AddToCartFromItemPage() {// 5. zad
+  public void AddToCartFromItemPage() {
     inventoryPage.itemPageLink(3).click();
     ItemPage itemPage = PageFactory.initElements(getWebDriver(), ItemPage.class);
     itemPage.addToCartButton.click();
@@ -77,7 +77,7 @@ public class InventoryPageTest extends BaseTest {
   }
 
   @Test(description = "Check that user can log out")
-  public void LogOut(){// 7. zad
+  public void LogOut(){
     WebDriverWait wait = new WebDriverWait(getWebDriver(), Duration.ofSeconds(10));
     inventoryPage.menuBurgerButton.click();
     wait.until(ExpectedConditions.visibilityOf(inventoryPage.logOutLink));//7.1 zad
