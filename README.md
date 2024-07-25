@@ -8,7 +8,7 @@ This project offers a structured framework for creating and executing automated 
 - Implements the Page Object Model for structured, reliable, and expandable test automation.
 
 ### Configuration Properties
-- Includes a `configuration.properties` file that centralizes all environment variables.
+- Includes a `Configuration.properties` file that centralizes all environment variables.
 
 ### ConfigFileReader
 - Provides a file reader to simplify the use of environment variables.
