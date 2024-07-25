@@ -28,7 +28,7 @@ This project offers a structured framework for creating and executing automated 
 ## Installation
 1. Clone the repository:
 ```sh
-git clone <repository_url>
+git clone https://github.com/FC122/maven_selenium.git
 ```
 
 2. Navigate to the maven_selenium directory:
